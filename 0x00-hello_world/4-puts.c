@@ -3,11 +3,10 @@
 
 /*
  * main -entry pint
+ *
  * Description: 'the program's description' 
  *
  * Return: Always 0 (Success)
- *
- * Using the Puts() function
  */
 
 int main(void)
