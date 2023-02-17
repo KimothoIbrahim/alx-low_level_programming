@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 
-/*Using the Puts() function*/
+/*
+ * main -entry pint
+ * Description: 'the program's description' 
+ *
+ * Return: Always 0 (Success)
+ *
+ * Using the Puts() function
+ */
 
 int main(void)
 {
