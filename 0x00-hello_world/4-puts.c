@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-/*
+/**
  * main -entry pint
  *
  * Description: 'the program's description' 
