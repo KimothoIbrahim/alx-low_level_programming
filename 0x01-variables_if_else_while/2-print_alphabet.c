@@ -14,8 +14,9 @@ int main(void)
 {		char character = 'a';
 		while (character <= 'z')
 		{
-		printf("%c", character);
+		putchar(character);
 		character++;
 		}
+		purchar('\n');
 		return (0);
 }
