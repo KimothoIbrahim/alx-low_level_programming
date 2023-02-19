@@ -24,8 +24,11 @@ int main(void)
 		putchar(a);
 		putchar(b);
 		putchar(c);
+		if(a + b + c != 168)
+		{
 		putchar(44);
 		putchar(32);
+		}
 		}
 		}
 		}

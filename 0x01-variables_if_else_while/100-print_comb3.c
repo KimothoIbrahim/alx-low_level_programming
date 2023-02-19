@@ -15,15 +15,17 @@ int main(void)
 			
 		for (a = 48; a < 58; a++)
 		{
-		int sum = a + b;
 		for (b = 48; b < 58; b++)
 		{
 		if (a != b && a < b)
 		{
 		putchar(a);
 		putchar(b);
+		if (a + b != 113)
+		{
 		putchar(44);
 		putchar(32);
+		}
 		}
 		}
 		}
