@@ -12,7 +12,6 @@
 
 int main(void)
 {		int a, b, c;
-			
 		for (a = 48; a < 58; a++)
 		{
 		for (b = 48; b < 58; b++)
@@ -24,7 +23,7 @@ int main(void)
 		putchar(a);
 		putchar(b);
 		putchar(c);
-		if(a + b + c != 168)
+		if (a + b + c != 168)
 		{
 		putchar(44);
 		putchar(32);
