@@ -1,11 +1,20 @@
 #include "main.h"
+
 /*
- * Main : entry point
- * Description - calls the print_alphabet function
- * Always returns 0
+ * print_alphabet : called by main
+ * description : loops from a to z and prints a character to standard out put on every iteration
+ * Returns nothing
  */
-int main(void)
-{
-	print_alphabet();
-	return (0);
+
+void print_alphabet(void)
+{	
+	/*local variable declaration */
+	char a = 'a';
+
+	while (a <= 'z')
+	{
+		_putchar(a);
+		a++;
+	}
+	_putchar('\n');
 }
