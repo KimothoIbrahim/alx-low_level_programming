@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * Main - something after
+ * main - something after
  * Description : Uses putchar function to print an variable name _putchar
  * Return: 0
  */
