@@ -1,14 +1,22 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
  * fizz_buzz - prints fizzbuzz for multiples of 15, buzz for
  * multiples of 5 and fizz for multiples of 3.
  *
- * main - description
+ * main - entry point to program
  *
- * Return: always returns 0
- *
+ * Return: 0
  */
+void fizz_buzz(void);
+
+int main(void)
+{
+	fizz_buzz();
+
+	return (0);
+}
 
 void fizz_buzz(void)
 {
@@ -32,10 +40,4 @@ void fizz_buzz(void)
 			printf("%d ", a);
 	}
 	printf("\n");
-}
-
-int main(void)
-{
-	fizz_buzz();
-	return (0);
 }
