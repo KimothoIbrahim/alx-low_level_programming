@@ -12,7 +12,7 @@ int main(void)
 {
 	fizz_buzz();
 
-	return 0;
+	return (0);
 }
 /**
  * fizz_buzz - prints fizzbuzz for multiples of 15, buzz for
@@ -37,7 +37,7 @@ void fizz_buzz(void)
 		{
 			printf("Buzz ");
 		}
-		else
+		else if ((a % 3 != 0) && (a % 5 != 0))
 		{
 			printf("%d ", a);
 		}
