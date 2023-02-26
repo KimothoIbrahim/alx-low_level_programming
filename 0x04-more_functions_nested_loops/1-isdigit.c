@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * int _isdigit -
+ * _isdigit -
  * @c:
  *
  * Return:
