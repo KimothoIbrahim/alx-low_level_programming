@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include "main.h"
+/**
+ * main - entry
+ *
+ * Return: 0
+ */
+void fizz_buzz(void);
 
+int main(void)
+{
+	fizz_buzz();
+}
 /**
  * fizz_buzz - prints fizzbuzz for multiples of 15, buzz for
  * multiples of 5 and fizz for multiples of 3.
