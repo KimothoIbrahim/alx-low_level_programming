@@ -12,20 +12,5 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int strSize = 0;
-	int i;
-	int j;
-	int isSame = 0;
-
-	for (i = 0; s1[i] != '\0'; i++)
-	{
-		strSize = i + 1;
-	}
-
-	for (j = 0; j < strSize; j++)
-	{
-		isSame += (*(s1 + j) - *(s2 + j));
-	}
-
-	return (isSame);
+	return (*s1 - *s2);
 }
