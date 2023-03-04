@@ -1,9 +1,12 @@
 #include "main.h"
 
 /**
+ * _strncat - desc
+ * @dest: desc
+ * @src: desc
+ * @n: desc
  *
- *
- *
+ * Return:
  */
 
 char *_strncat(char *dest, char *src, int n)
