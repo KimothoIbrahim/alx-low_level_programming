@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _strncat - desc
+ * _strncat - some description
  * @dest: desc
  * @src: desc
  * @n: desc
  *
- * Return:
+ * Return: dest
  */
 
 char *_strncat(char *dest, char *src, int n)
@@ -18,7 +18,7 @@ char *_strncat(char *dest, char *src, int n)
 		length = i;
 	}
 
-	for (j = 0; j < n; j++)
+	for (j = 0; j < n && (length + n < 98); j++)
 	{
 		*(dest + ((length + 1) + j)) = *(src + j);
 	}
