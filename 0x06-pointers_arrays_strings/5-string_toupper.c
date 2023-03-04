@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * string_toupper - 
- * @a:
+ * string_toupper - desc
+ * @a: desc
  *
  * Return: the pointer *a
  */
