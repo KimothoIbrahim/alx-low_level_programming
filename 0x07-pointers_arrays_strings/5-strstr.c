@@ -26,7 +26,7 @@ char *_strstr(char *haystack, char *needle)
 				x = j;
 		}
 		if (x == length)
-			return ((haystack + i) - (length - 1));
+			return ((haystack + (i - 1) - (length)));
 	}
 	return (NULL);
 }
