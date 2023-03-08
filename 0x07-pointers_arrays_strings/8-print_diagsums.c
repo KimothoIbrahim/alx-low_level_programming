@@ -13,16 +13,16 @@ void print_diagsums(int *a, int size)
 	int diag1 = 0;  /* sum of primary diagonal elements*/
 	int diag2 = 0;  /* sum of secondary diagonal elements*/
 
-	for (i = 0; i < size; i++) 
-	{ 
+	for (i = 0; i < size; i++)
+	{
 		for (j = 0; j < size; j++)
 		{
-			/*Condition for principal diagonal*/ 
+			/*Condition for principal diagonal*/
 			if (i == j)
 			{
 				diag1 += a[i * size + j];
 			}
-			
+
 			/*Condition for secondary diagonal*/
 
 			if ((i + j) == (size - 1))
