@@ -24,6 +24,10 @@ int wildcmp(char *str1, char *str2)
 		/* recursive case: characters match, check next characters in each string*/
 		return (wildcmp(++str1, ++str2));
 	}
+	else if (*str2 == '*')
+	{
+		return (wildcmp(str1, ++str2));
+	}
 	else
 	{
 		/* recursive case: characters don't match, strings are not identical*/
