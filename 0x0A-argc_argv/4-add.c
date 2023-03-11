@@ -9,7 +9,7 @@
  * Return: always returns 0 upon success
  */
 
-int main(int argc, char *argv[])
+int main(int argc __attribute__((__unused__)), char *argv[])
 {
 	int i, sum = 0;
 
