@@ -32,7 +32,7 @@ int change(int x, int *s)
  * is given: 0 if argument is either +ve / -ve
  */
 
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int dinominations[] = {25, 10, 5, 2, 1, 0};
 
