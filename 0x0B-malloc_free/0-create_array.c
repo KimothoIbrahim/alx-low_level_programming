@@ -16,17 +16,17 @@ char *create_array(unsigned int size, char c)
 	unsigned int i;
 
 	if (!size)
-		return NULL;
+		return (NULL);
 
 	a = malloc(sizeof(c) * size);
 
 	if (a == NULL)
 	{
 		printf("Error: program FAILED \n");
-		return NULL;
+		return (NULL);
 	}
 
-	for(i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		a[i] = c;
 	}
