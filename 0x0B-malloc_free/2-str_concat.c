@@ -14,7 +14,14 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *a;
-	unsigned long int i, temp, j;
+	int i, temp, j, k, l;
+	int len1 = 0, len2 = 0;
+
+	for (k = 0; s1[k] != '\0'; k++)
+		len1 = k + 1;
+		
+	for (l = 0; s2[l] != '\0'; l++)
+		len2 = l + 1;
 
 	if (NULL)
 	{
@@ -22,20 +29,20 @@ char *str_concat(char *s1, char *s2)
 		return (a);
 	}
 
-	a = malloc(sizeof(s1) + sizeof(s2) - 1);
+	printf("%d \n", (len1 + len2));
 
+	a = malloc(len1 + len2 + 1);
+	
 	if (a == NULL)
 		return (NULL);
 
-	for (i = 0; i + 1 <= sizeof(a); i++)
+	for (i = 0; i <= len1; i++)
 	{
-		if (s1[i] != '\0')
-			a[i] = s1[i];
-		else
-			temp = i;
+		a[i] = s1[i];
+		temp = i;
 	}
 
-	for (j = 0; j <= sizeof(a); j++)
+	for (j = 0; j <= len2; j++)
 	{
 		a[j + temp] = s2[j];
 	}
