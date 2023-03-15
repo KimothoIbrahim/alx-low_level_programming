@@ -13,21 +13,21 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *a;
-	int i, temp, j, k, l;
+	char *a = NULL, b[] = "";
+	int i, j = 0, k, l;
 	int len1 = 0, len2 = 0;
 
+	if (s1 == NULL)
+		s1 = b;
+
+	if (s2 == NULL)
+		s2 = b;
+	
 	for (k = 0; s1[k] != '\0'; k++)
 		len1 = k + 1;
 		
 	for (l = 0; s2[l] != '\0'; l++)
 		len2 = l + 1;
-
-	if (NULL)
-	{
-		a = "";
-		return (a);
-	}
 
 	printf("%d \n", (len1 + len2));
 
@@ -36,16 +36,16 @@ char *str_concat(char *s1, char *s2)
 	if (a == NULL)
 		return (NULL);
 
-	for (i = 0; i <= len1; i++)
+	for (i = 0; i < len1 + len2 ; i++)
 	{
-		a[i] = s1[i];
-		temp = i;
+		if (a[i] != '\0')
+			a[i] = s1[i];
+		else
+			a[i] = s2[j];
+		j++;
 	}
-
-	for (j = 0; j <= len2; j++)
-	{
-		a[j + temp] = s2[j];
-	}
+	
+	a[len1 + len2 + 1] = '\0';
 
 	return (a);
 }
