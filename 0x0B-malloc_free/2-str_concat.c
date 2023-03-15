@@ -29,21 +29,28 @@ char *str_concat(char *s1, char *s2)
 	for (l = 0; s2[l] != '\0'; l++)
 		len2 = l + 1;
 
+	printf("%d \n", len1);
+
 	a = malloc(len1 + len2 + 1);
 	
 	if (a == NULL)
 		return (NULL);
 
-	for (i = 0; i < len1 + len2 ; i++)
+	for (i = 0; i < len1 + len2 + 1; i++)
 	{
-		if (a[i] != '\0')
+		if (i < len1)
+		{
 			a[i] = s1[i];
+		}
 		else
+		{
+			printf("%d %d \n", i, j);
 			a[i] = s2[j];
-		j++;
+			j++;
+		}
 	}
-	
-	a[len1 + len2 + 1] = '\0';
 
+	a[len1 + len2 + 1] = '\0';
+	
 	return (a);
 }
