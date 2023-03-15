@@ -29,8 +29,6 @@ char *str_concat(char *s1, char *s2)
 	for (l = 0; s2[l] != '\0'; l++)
 		len2 = l + 1;
 
-	printf("%d \n", (len1 + len2));
-
 	a = malloc(len1 + len2 + 1);
 	
 	if (a == NULL)
