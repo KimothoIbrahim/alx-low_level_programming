@@ -5,7 +5,7 @@
 /**
  * _strdup - copy a string to memory
  * @str: string to be copied
- * 
+ *
  * Return: returns a pointer to created memory location
  */
 
@@ -14,11 +14,11 @@ char *_strdup(char *str)
 	int i, strlen;
 	char *a;
 
+	if (str == NULL)
+		return (NULL);
+
 	for (strlen = 0; *(str + strlen) != '\0';  strlen++)
 		strlen = strlen + 1;
-
-	if(str == NULL)
-		return (NULL);
 
 	a = malloc(sizeof(char) * strlen + 1);
 
@@ -27,7 +27,7 @@ char *_strdup(char *str)
 		printf("Error : Malloc malfunctioned \n");
 		return (NULL);
 	}
-	
+
 	for (i = 0; *(str + i) != '\0'; i++)
 	{
 		a[i] = *(str + i);
