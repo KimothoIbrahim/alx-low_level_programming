@@ -22,15 +22,15 @@ char *str_concat(char *s1, char *s2)
 
 	if (s2 == NULL)
 		s2 = b;
-	
+
 	for (k = 0; s1[k] != '\0'; k++)
 		len1 = k + 1;
-		
+
 	for (l = 0; s2[l] != '\0'; l++)
 		len2 = l + 1;
 
 	a = malloc(len1 + len2 + 1);
-	
+
 	if (a == NULL)
 		return (NULL);
 
@@ -48,6 +48,6 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	a[len1 + len2 + 1] = '\0';
-	
+
 	return (a);
 }
