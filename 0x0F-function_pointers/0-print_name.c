@@ -1,7 +1,8 @@
 #include "function_pointers.h"
 
 /**
- * print_name - function calls a function pointer and passes it a name which it then prints
+ * print_name - function calls a function
+ * pointer and passes it a name which it then prints
  * @name: pointer to a name
  * @f: pointer to the passed funtion
  */
