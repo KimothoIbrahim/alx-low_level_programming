@@ -7,7 +7,11 @@
 
 int main(void)
 {
-	printf("%s \n", __FILE__);
-	return (0);
+	#ifdef __FILE__
 
+	printf("%s \n", __FILE__);
+
+	#endif /*__FILE__*/
+
+	return (0);
 }
