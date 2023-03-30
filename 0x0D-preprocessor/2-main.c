@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+ * main - Prints current file name
+ *
+ * Return: always returns 0
+ */
 
 int main(void)
 {
