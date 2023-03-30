@@ -9,7 +9,7 @@ int main(void)
 {
 	#ifdef __FILE__
 
-	printf("%s \n", __FILE__);
+	printf("%s\n", __FILE__);
 
 	#endif /*__FILE__*/
 
