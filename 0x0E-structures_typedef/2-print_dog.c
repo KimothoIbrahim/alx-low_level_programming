@@ -8,31 +8,21 @@
  * @d: pointer to dog structure
  */
 
-/*void print_dog(struct dog *d)
+void print_dog(struct dog *d)
 {
 	if (d == NULL)
 		return;
 
 	if (d->name == NULL)
-	{
-		d->name = "(nil)";
-		printf("Name: %s \n", d->name);
-	}
-	else
-		printf("Name: %s\n", d->name);
-
-	printf("Age: %f\n", d->age);
+		printf("Name: %p \n", d->name);
 
 	if (d->owner == NULL)
-	{
-		d->owner = "(nil)";
-		printf("Name: %s \n", d->owner);
-	}
-	else
-		printf("Owner: %s\n", d->owner);
-}*/
+		printf("Name: %p \n", d->owner);
+	
+	printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
+}
 
-void print_dog(struct dog *d)
+/*void print_dog(struct dog *d)
 {
 	if (d == NULL)
 		return;
@@ -43,4 +33,4 @@ void print_dog(struct dog *d)
 		d->owner = "(nil)";
 
 	printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
-}
+}*/
