@@ -3,13 +3,13 @@
 
 /**
  * free_listint - frees list
- * @head pointer to the list
+ * @head: pointer to the list
  */
 
 void free_listint(listint_t *head)
 {
 	listint_t *temp;
-	
+
 	while (head)
 	{
 		temp = head->next;
