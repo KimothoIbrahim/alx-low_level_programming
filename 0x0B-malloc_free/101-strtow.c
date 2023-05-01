@@ -60,6 +60,9 @@ char **strtow(char *str)
 	char **pointer;
 	char *holder;
 
+	if (str == NULL || str == "")
+		return (NULL);
+
 	words = wordCounter(str);
 	length = stringLength(str);
 
