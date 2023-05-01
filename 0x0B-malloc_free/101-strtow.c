@@ -62,7 +62,6 @@ char **strtow(char *str)
 
 	if (str == NULL || str == "")
 		return (NULL);
-
 	words = wordCounter(str);
 	length = stringLength(str);
 
@@ -81,10 +80,8 @@ char **strtow(char *str)
 
 				if (holder == NULL)
 					return (NULL);
-
 				while (wBegining < wEnd)
 					*holder++ = str[wBegining++];
-
 				*holder = '\0';
 				pointer[k] = holder - characters;
 				k++;
