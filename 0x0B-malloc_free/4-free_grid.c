@@ -1,14 +1,20 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
 /**
- * free_grid - frees memory previosly allocated to a 2D array 
- * @grid: grid address
- * @height: array height
+ * free_grid - free memory allocated to a 2D array
+ * @grid: pointer to 2D array
+ * @height: rows of @D array
+ *
+ * Return: nothing
  */
 
 void free_grid(int **grid, int height)
 {
-	free(grid * 4);
+	int i;
+
+	for (i = 0; i < height; i++)
+		free(grid[i]);
+
+	free(grid);
 }
