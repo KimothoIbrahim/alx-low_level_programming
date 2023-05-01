@@ -63,8 +63,6 @@ char **strtow(char *str)
 	words = wordCounter(str);
 	length = stringLength(str);
 
-	printf("%d %d\n", words, length);
-
 	pointer = malloc(sizeof(char *) * (words + 1));
 	if (pointer == NULL)
 		return (NULL);
