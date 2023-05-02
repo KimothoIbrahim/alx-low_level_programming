@@ -56,14 +56,16 @@ int stringLength(char *str)
 
 char **strtow(char *str)
 {
-	int words, length, characters = 0, wBegining, wEnd, i, k = 0;
+	int words, length = 0, characters = 0, wBegining, wEnd, i, k = 0;
 	char **pointer;
 	char *holder;
 
-	if (str == NULL || str == "")
-		return (NULL);
 	words = wordCounter(str);
 	length = stringLength(str);
+
+	
+	if (str == NULL || length == 0)
+		return (NULL);
 
 	pointer = malloc(sizeof(char *) * (words + 1));
 	if (pointer == NULL)
