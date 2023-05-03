@@ -68,8 +68,8 @@ int main(int argc, char *argv[])
 	firstString = argv[1], secondString = argv[2];
 	if (argc != 3 || !is_digit(firstString) || !is_digit(secondString))
 		errors();
-	len1 = _strlen(firstString);
-	len2 = _strlen(secondString);
+	len1 = _stringlength(firstString);
+	len2 = _stringlength(secondString);
 	len = len1 + len2 + 1;
 	result = malloc(sizeof(int) * len);
 	if (!result)
@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
 	{
 		digit1 = firstString[len1] - '0';
 		carry = 0;
-		for (len2 = _strlen(secondString) - 1; len2 >= 0; len2--)
+		for (len2 = _stringlength(secondString) - 1; len2 >= 0; len2--)
 		{
 			digit2 = secondString[len2] - '0';
 			carry += result[len1 + len2 + 1] + (digit1 * digit2);
