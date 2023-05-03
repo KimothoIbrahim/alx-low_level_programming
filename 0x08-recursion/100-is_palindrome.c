@@ -1,34 +1,50 @@
 #include "main.h"
-#include <stdio.h>
+
+int _pal(char *s, int i, int len);
+int _strlen(char *s);
 
 /**
- * calc_length - get lenth of string
- * @s: string input
+ * is_palindrome - check for a palindrome
+ * @s: given string
  *
- * return: length
- */
-
-int calc_length(char *s)
-{
-	if(*s == '\0')
-		return (0);
-
-	return (1 + calc_length(s + 1));
-}
-
-/**
- * is_palindrome - check is string is similar from both ends
- * @s: string input
- *
- * Return: 1 if true 0 if false
+ * Return: 1 if true, 0 if false
  */
 
 int is_palindrome(char *s)
-{	
-	if (*s == *(s + (calc_length(s + 1))))
+{
+	if (*s == 0)
 		return (1);
+	return (_pal(s, 0, _strlen(s)));
+}
 
-	is_palindrome(s + 1);
+/**
+ * _strlen - calculate string length
+ * @s: given string
+ *
+ * Return: string length
+ */
 
-	return (0);
+int _strlen(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
+}
+
+/**
+ * _pal - check characters
+ * @s: given string
+ * @i: iterative variable
+ * @len: string length
+ *
+ * Return: 1 if true, 0 if false
+ */
+
+int _pal(char *s, int i, int len)
+{
+	if (*(s + i) != *(s + len - 1))
+		return (0);
+	if (i >= len)
+		return (1);
+	return (_pal(s, i + 1, len - 1));
 }
