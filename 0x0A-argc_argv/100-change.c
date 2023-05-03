@@ -1,27 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-/**
- * change - print number of coins needed to make the change
- * @x: param
- * @s: array
- *
- * Return: number of coins making up the change
- */
-
-int change(int x, int *s)
-{
-	int coin, mul, coins = 0;
-
-	if (*s == 0)
-		return (0);
-
-	coin = x / *s;
-	mul = coin * *s;
-	coins = coin + change((x - mul), (s + 1));
-
-	return (coins);
-}
+#include "main.h"
 
 /**
  * main - calls the change() function
@@ -32,23 +11,34 @@ int change(int x, int *s)
  * is given: 0 if argument is either +ve / -ve
  */
 
-int main(int __attribute__((__unused__)) argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int dinominations[] = {25, 10, 5, 2, 1, 0};
+	int number, i, res;
+	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
-		printf("Error \n");
+		printf("Error\n");
 		return (1);
 	}
-	else if (*argv[1] < '0')
+
+	number = atoi(argv[1]);
+	res = 0;
+
+	if (number < 0)
 	{
-		printf("0 \n");
+		printf("0\n");
 		return (0);
 	}
-	else
+
+	for (i = 0; i < 5 && number >= 0; i++)
 	{
-		printf("%d \n", change(atoi(argv[1]), dinominations));
-		return (0);
+		while (number >= coins[i])
+		{
+			res++;
+			number -= coins[i];
+		}
 	}
+	printf("%d\n", res);
+	return (0);
 }
