@@ -3,7 +3,7 @@
 
 /**
  * rot13 - encoder rot13
- * @s: pointer to string
+ * @a: pointer to string
  *
  * Return: pointer to rotated string
  */
