@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	firstnumber = _atoi(argv[1]);
+	firstNumber = _atoi(argv[1]);
 	secondNumber = _atoi(argv[2]);
 	output = firstNumber * secondNumber;
 
