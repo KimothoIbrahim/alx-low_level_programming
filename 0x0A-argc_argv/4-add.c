@@ -1,34 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+/**
+ * _numCheck - look for a number in string
+ * @str: given string
+ *
+ * Return: always 0
+ */
+
+int _numCheck(char *str)
+{
+	unsigned int count = 0;
+
+	while (count < strlen(str))
+	{
+		if (!isdigit(str[count]))
+		{
+			return (0);
+		}
+		count++;
+	}
+	return (1);
+}
 
 /**
- * main - func
- * @argc: desc
- * @argv: desc
+ * main - Print the name of the program
+ * @argc: number of arguments
+ * @argv: argument array
  *
- *Return: 0
+ * Return: always 0
  */
 
 int main(int argc, char *argv[])
 {
-	int i, j, sum = 0;
+	int counter = 1, convertedInt, sum = 0;
 
-	for (i = 1; i < argc; i++)
+	while (counter < argc)
 	{
-		for (j = 0; argv[i][j]; j++)
+		if (_numCheck(argv[count]))
 		{
-			if (argv[i][j] < '0' || argv[i][j] > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
-			else
-			{
-				int s = atoi(argv[i]);
-
-				sum += s;
-			}
+			convertedInt = atoi(argv[count]);
+			sum += convertedInt;
 		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+		counter++;
 	}
 	printf("%d\n", sum);
 	return (0);
