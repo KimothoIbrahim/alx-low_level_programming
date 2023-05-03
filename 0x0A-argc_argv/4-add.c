@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
 
 	while (counter < argc)
 	{
-		if (_numCheck(argv[count]))
+		if (_numCheck(argv[counter]))
 		{
-			convertedInt = atoi(argv[count]);
+			convertedInt = atoi(argv[counter]);
 			sum += convertedInt;
 		}
 		else
