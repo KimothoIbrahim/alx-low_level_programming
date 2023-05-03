@@ -2,9 +2,8 @@
 #include <string.h>
 
 /**
- * puts2 -
- * @str:
- *
+ * puts2 - prints all odd charcters in a string
+ * @str: given string
  */
 void puts2(char *str)
 {
