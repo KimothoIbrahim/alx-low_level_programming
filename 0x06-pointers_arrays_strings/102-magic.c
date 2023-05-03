@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - edit code
+ *
+ * Return: zero
+ */
+
 int main(void)
 {
 	int n;
