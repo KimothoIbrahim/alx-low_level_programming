@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 	for (i = 63; i >= 0; i--)
 	{
 		movingPart = n >> i;
-		
+
 		if (movingPart & 1)
 		{
 			_putchar('1');
