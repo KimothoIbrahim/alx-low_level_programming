@@ -8,19 +8,21 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long i;
-	int j;
-	char byte, bit;
+	int i, tally = 0;
+	unsigned long int movingPart;
 
-	for (i = 0; i < sizeof(int); i++)
+	for (i = 63; i >= 0; i--)
 	{
-		byte = ((char *)&n)[i];
-		for (j = 8; j >= 0; j--)
+		movingPart = n >> i;
+		
+		if (movingPart & 1)
 		{
-			bit = (byte >> j) & 1;
-			_putchar(bit + 48);
+			_putchar('1');
+			tally++;
 		}
-		_putchar(' ');
+		else if (tally)
+			_putchar('0');
 	}
-	_putchar('\n');
+	if (!tally)
+		_putchar('0');
 }
