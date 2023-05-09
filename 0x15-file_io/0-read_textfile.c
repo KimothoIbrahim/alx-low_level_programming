@@ -11,14 +11,14 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *container;
-	ssize_t file_descriptor, read, written;
+	ssize_t file_descriptor, reads, written;
 
 	file_descriptor = open(filename, O_RDONLY);
 	if (file_descriptor == -1)
 		return (0);
 	container = malloc(sizeof(char) * letters);
-	read = read(file_descriptor, container, letters);
-	written = write(STDOUT_FILENO, container, read);
+	reads = read(file_descriptor, container, letters);
+	written = write(STDOUT_FILENO, container, reads);
 
 	free(container);
 	close(file_descriptor);
