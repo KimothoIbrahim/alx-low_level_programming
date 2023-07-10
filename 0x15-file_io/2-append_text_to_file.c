@@ -3,7 +3,7 @@
 /**
  * append_text_to_file - attach text to end of a file.
  * @filename: pointer to file
- * @text_content:
+ * @text_content: descibed
  *
  * Return: -1 failure Otherwise 1.
  */
