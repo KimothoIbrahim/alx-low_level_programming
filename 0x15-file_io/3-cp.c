@@ -34,7 +34,7 @@ void fileCloser(int fdesc)
 {
 	int z;
 
-	z = close(fdesc:);
+	z = close(fdesc);
 
 	if (z == -1)
 	{
@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 		}
 
 	w = write(end, buffer, r);
-	if (to == -1 || w == -1)
+	if (end == -1 || w == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		free(buffer);
