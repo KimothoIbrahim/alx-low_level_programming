@@ -4,7 +4,7 @@
  * sum_dlistint - get total of all things
  *
  * @head: list head
- * Returns: data sum
+ * Return: data sum
  */
 int sum_dlistint(dlistint_t *head)
 {
