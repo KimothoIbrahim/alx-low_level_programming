@@ -1,3 +1,5 @@
+#include "hash_tables.h"
+
 /**
  * key_index - Make index for storage in hash table.
  * @key: Key input.
