@@ -205,7 +205,7 @@ void shash_table_delete(shash_table_t *ht)
 	{
 		tmp = node->snext;
 		free(node->key);
-        free(node->value);
+		free(node->value);
 		free(node);
 		node = tmp;
 	}
