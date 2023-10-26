@@ -1,6 +1,3 @@
 # my first Makefile
 
 all: school
-
-school: a.out
-	cp a.out school
