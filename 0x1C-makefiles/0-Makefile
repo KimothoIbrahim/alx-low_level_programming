@@ -1,0 +1,3 @@
+# my first Makefile
+
+all: a.out
